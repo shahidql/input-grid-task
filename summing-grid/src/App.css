@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .App-header {
@@ -15,4 +17,66 @@
 
 .App-intro {
   font-size: large;
+}
+
+
+/*GRID Related Style*/
+.App .myGrid{
+  text-align: left;
+  overflow: hidden;
+  width:100%;
+  margin:40px 0 0 0;
+}
+.App .myGrid>div{
+  width:25%;
+  float:left;
+  text-align: left;
+}
+.App .myGrid>div input{
+  width:100%;
+  color:#000;
+  border:none;
+  display: block;
+  height: 30px;
+  border: 1px solid #ccc;
+  margin-bottom: 4px;
+}
+.App .myGrid>div label{
+  font-size:12px;
+}
+.App .myGrid>div i{
+  font-size:11px;
+  color:red;
+  width:100%;
+  display: none;
+  text-align: left;
+}
+.App .myGrid>div>span{
+  display: block;
+  padding:0 5px;
+}
+.App .myGrid>div>span.error i{
+  display: block;
+}
+@media only screen and (min-width:721px){
+  .App{
+    max-width: 1000px;
+  }
+}
+@media only screen and (max-width:720px){
+  .App .myGrid>div{
+    width:50%;
+    margin-bottom:5px;
+  }
+}
+@media only screen and (max-width:320px){
+  .App{
+    padding:0 5px;
+  }
+  .App .myGrid>div{
+    width:100%;
+    display: block;
+    float: none;
+    margin-bottom:5px;
+  }
 }
